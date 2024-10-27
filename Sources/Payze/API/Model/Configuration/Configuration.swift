@@ -65,7 +65,7 @@ extension Configuration {
     static var example: Self {
         Self(
             colorPalette: .init(),
-            companyIcon: Image(.airbnb),
+            companyIcon: Image("airbnb", bundle: .module),
             environment: .development,
             language: .english
         )

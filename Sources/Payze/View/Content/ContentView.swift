@@ -250,7 +250,7 @@ private extension ContentView {
             HStack {
                 Spacer()
 
-                Image(.arrowDown)
+                Image("arrowDown", bundle: .module)
                     .frame(width: 50, height: 50)
                     .offset(x: 4, y: 8)
             }

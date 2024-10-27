@@ -35,15 +35,15 @@ enum CardBrand: Decodable {
     var icon: Image {
         switch self {
         case .amex:
-            Image(.amex)
+            Image("amex", bundle: .module)
         case .humo:
-            Image(.humo)
+            Image("humo", bundle: .module)
         case .mastercard:
-            Image(.masterCard)
+            Image("masterCard", bundle: .module)
         case .uzCard:
-            Image(.uzcard)
+            Image("uzcard", bundle: .module)
         case .visa:
-            Image(.visa)
+            Image("visa", bundle: .module)
         }
     }
 

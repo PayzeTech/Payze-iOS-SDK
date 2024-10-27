@@ -16,7 +16,7 @@ struct FooterView: View {
             Text(LocalizationKey.Footer.title())
                 .foregroundColor(configuration.colorPalette.textSecondary)
 
-            Image(.payze)
+            Image("payze", bundle: .module)
                 .renderingMode(.template)
                 .opacity(0.7)
                 .blendMode(.luminosity)
