@@ -2,20 +2,8 @@ import SwiftUI
 import UIKit
 
 /// Entity for starting payze payment process
-/// 1. Use 'Payze.init()' to create payze instance
-/// 2. Use 'present()' instance method to present payment flow
+/// - Use 'start()' function to create and present payment flow
 public struct Payze {
-//    let configuration: Configuration
-
-//    private init(
-//        colorPalette: ColorPalette = .init(),
-//        companyIcon: Image? = nil,
-//        environment: ServiceEnvironment,
-//        language: Language
-//    ) {
-//
-//    }
-
     /// - Parameters:
     ///   - sourceViewController: Root view controller which will present payment flow on top of itself
     ///   - colorPalette: Colour configuration of card input screen,uses Payze colours by default
