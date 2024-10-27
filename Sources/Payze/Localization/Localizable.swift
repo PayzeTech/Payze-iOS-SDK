@@ -19,13 +19,23 @@ extension Localizable {
         case .uzbekistan: "uz-UZ"
         }
 
-        guard let path = Bundle.module.path(forResource: languageIdentifier, ofType: "lproj"),
+        let bundle = makeBundle()
+
+        guard let path = bundle.path(forResource: languageIdentifier, ofType: "lproj"),
               let languageBundle = Bundle(path: path)
         else {
-            return NSLocalizedString(name, bundle: .module, comment: "")
+            return NSLocalizedString(name, bundle: bundle, comment: "")
         }
 
         return NSLocalizedString(name, bundle: languageBundle, comment: "")
+    }
+
+    private func makeBundle() -> Bundle {
+#if SWIFT_PACKAGE
+        .module
+#else
+        Bundle(for: Localizable.self)
+#endif
     }
 
     private var name: String {
