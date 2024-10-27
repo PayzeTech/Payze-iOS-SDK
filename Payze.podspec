@@ -5,6 +5,7 @@ spec.summary       = "Sort based Object Tracker in Swift"
 spec.description   = <<-DESC
 open to any improvements/corrections
 DESC
+spec.homepage      = "https://github.com/PayzeTech/Payze-iOS-SDK/"
 spec.license       = { :type => "MIT", :file => "LICENSE" }
 spec.author        = { "author" => "giga.khizanishvili@gmail.com" }
 spec.platform      = :ios, "14.0"
