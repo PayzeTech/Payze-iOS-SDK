@@ -14,7 +14,7 @@ extension Bundle {
         let bundle = Bundle(for: Configuration.self)
         let bundleURL = bundle.resourceURL?
             .appendingPathComponent("PayzeResources.bundle")!
-        return Bundle(url: bundleURL)!
+        return Bundle(url: bundleURL!)!
     }
 #endif
 }
