@@ -1,6 +1,3 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-
 import SwiftUI
 import UIKit
 
@@ -8,23 +5,37 @@ import UIKit
 /// 1. Use 'Payze.init()' to create payze instance
 /// 2. Use 'present()' instance method to present payment flow
 public struct Payze {
-    let configuration: Configuration
+//    let configuration: Configuration
 
+//    private init(
+//        colorPalette: ColorPalette = .init(),
+//        companyIcon: Image? = nil,
+//        environment: ServiceEnvironment,
+//        language: Language
+//    ) {
+//
+//    }
 
-/// - Parameters:
-///   - colorPalette: Colour configuration of card input screen,uses Payze colours by default
-///   - companyIcon: Optional parameter to display on payment screen
-///   - environment: Determines whether payment will be done on development or production environment
-///   - language: Current localisation, supports: English, Uzbek, and Russian languages
-///
-/// - Warning: Initializing alone won't start payment process you have to use `present()` function to start payment flow
-    public init(
+    /// - Parameters:
+    ///   - sourceViewController: Root view controller which will present payment flow on top of itself
+    ///   - colorPalette: Colour configuration of card input screen,uses Payze colours by default
+    ///   - companyIcon: Optional parameter to display on payment screen
+    ///   - environment: Determines whether payment will be done on development or production environment
+    ///   - language: Current localisation, supports: English, Uzbek, and Russian languages
+    ///   - transactionId: Payze transactionId
+    ///   - amount: Money amount
+    ///   - completionHandler: Callback for when payment flow is finished
+    public static func start(
+        on sourceViewController: UIViewController,
         colorPalette: ColorPalette = .init(),
         companyIcon: Image? = nil,
         environment: ServiceEnvironment,
-        language: Language
+        language: Language,
+        transactionId: String,
+        amount: Money,
+        completionHandler: @escaping (PaymentCompletionType) -> Void
     ) {
-        self.configuration = Configuration(
+        let configuration = Configuration(
             colorPalette: colorPalette,
             companyIcon: companyIcon,
             environment: environment,
@@ -32,19 +43,7 @@ public struct Payze {
         )
 
         DependencyGraph.registerAllServices(using: configuration)
-    }
 
-/// - Parameters:
-///   - sourceViewController: Root view controller which will present payment flow on top of itself
-///   - transactionId: Payze transactionId
-///   - amount: Money amount
-///   - completionHandler: Callback for when payment flow is finished
-    public func present(
-        on sourceViewController: UIViewController,
-        transactionId: String,
-        amount: Money,
-        completionHandler: @escaping (PaymentCompletionType) -> Void
-    ) {
         let viewModel = ContentViewModel(
             transactionId: transactionId,
             amount: amount,
