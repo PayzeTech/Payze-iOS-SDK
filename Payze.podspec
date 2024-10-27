@@ -12,7 +12,7 @@ spec.platform      = :ios, "14.0"
 spec.swift_version = "5.10"
 
 spec.source        = { :git => "https://github.com/PayzeTech/Payze-iOS-SDK/", :branch => "main" }
-spec.source_files  = "Sources/Payze/API/**/*.swift"
+spec.source_files  = "Sources/Payze/**/*.swift"
 
 spec.xcconfig      = { "SWIFT_VERSION" => "5.10" }
 end
