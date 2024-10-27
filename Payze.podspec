@@ -10,7 +10,7 @@ spec.author        = { "author" => "giga.khizanishvili@gmail.com" }
 spec.platform      = :ios, "14.0"
 spec.swift_version = "5.10"
 
-spec.source        = { :git => "https://github.com/PayzeTech/Payze-iOS-SDK/", :tag => "#{0.1}" }
+spec.source        = { :git => "https://github.com/PayzeTech/Payze-iOS-SDK/", :branch => "main" }
 spec.source_files  = "Sources/**/*.{swift,h,m}"
 
 spec.xcconfig      = { "SWIFT_VERSION" => "5.10" }
