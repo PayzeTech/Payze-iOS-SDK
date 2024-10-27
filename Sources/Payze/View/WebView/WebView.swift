@@ -26,7 +26,7 @@ struct WebView: UIViewRepresentable {
         Coordinator(self, onNavigation: onNavigation)
     }
 
-    class Coordinator: NSObject, WKNavigationDelegate {
+    final class Coordinator: NSObject, WKNavigationDelegate {
         var parent: WebView
         var onNavigation: (URL) -> Void
 
