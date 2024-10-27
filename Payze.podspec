@@ -13,6 +13,12 @@ spec.swift_version = "5.10"
 
 spec.source        = { :git => "https://github.com/PayzeTech/Payze-iOS-SDK/", :branch => "main" }
 spec.source_files  = "Sources/**/*.swift"
+spec.resource_bundles = {
+ "Resources" => [ "Sources/Resources/*"];
+ "Localization" => [ "Sources/Localization/*"]
+}
+
+spec.frameworks = "UIKit", "Foundation", "Combine"
 
 spec.xcconfig      = { "SWIFT_VERSION" => "5.10" }
 end
