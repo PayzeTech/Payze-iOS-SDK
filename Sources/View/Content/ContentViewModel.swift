@@ -13,7 +13,6 @@ final class ContentViewModel: ObservableObject {
     @Injected private var cardNumberFormatter: CardNumberFormatter
     @Injected private var payUseCase: PayUseCase
     @Injected private var getCardBrandUseCase: GetCardBrandUseCase
-    @Injected private var getTransactionDetailsUseCase: GetTransactionDetailsUseCase
     @Injected private var getUrlPathActionUseCase: GetUrlPathActionUseCase
     
     @Injected private var configuration: Configuration
@@ -110,7 +109,7 @@ final class ContentViewModel: ObservableObject {
                         self?.openWebView(withURL: url)
                     }
                 case .failure(let error):
-                    self?.showErrorMessage(error.localizedDescription)
+                    self?.showErrorMessage(error.message)
                 }
             }
         }

@@ -45,11 +45,6 @@ extension DependencyGraph {
         )
 
         DependencyGraph.shared.register(
-            DefaultGetTransactionDetailsUseCase(),
-            for: GetTransactionDetailsUseCase.self
-        )
-
-        DependencyGraph.shared.register(
             DefaultCardNumberFormatter(),
             for: CardNumberFormatter.self
         )
