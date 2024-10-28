@@ -11,7 +11,7 @@ The Payze iOS SDK enables the integration of secure, no-redirect payment flows i
 To integrate Payze-iOS-SDK using CocoaPods, add it to your `Podfile`:
 
 ```ruby
-pod 'Payze-iOS-SDK', '~> 1.0.0'
+pod 'Payze', :git => 'https://github.com/PayzeTech/Payze-iOS-SDK.git', :tag => '1.0.0'
 ```
 
 Then, run `pod install` to install the SDK.
