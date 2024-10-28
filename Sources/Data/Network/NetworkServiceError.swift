@@ -6,7 +6,7 @@
 //
 
 struct NetworkServiceError: Decodable {
-    let data: String? // TODO: ?
+    let data: String?
     let status: Status
 }
 
@@ -14,7 +14,7 @@ struct NetworkServiceError: Decodable {
 extension NetworkServiceError {
     struct Status: Decodable {
         let message: String
-        let errors: [String]
-        let type: String
+        let errors: [String]?
+        let type: String?
     }
 }
