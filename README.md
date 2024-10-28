@@ -27,7 +27,7 @@ You can also use Swift Package Manager to add the dependency directly in Xcode:
 Use the `Payze.start` function with your configuration options to start a payment. Set up `Payze` with the following parameters:
 
 ```swift
-import PayzeSDK
+import Payze
 
 Payze.start(
     on: self, 
