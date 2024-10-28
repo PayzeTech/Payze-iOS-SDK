@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 spec.name          = "Payze"
 spec.version       = "1.0.0"
-spec.summary       = "Sort based Object Tracker in Swift"
+spec.summary       = "Seamless no-redirect payments provider"
 spec.description   = <<-DESC
-open to any improvements/corrections
+The Payze iOS SDK enables the integration of secure, no-redirect payment flows in iOS applications. This SDK is designed to simplify the payment process and offers support for multiple currencies, languages, and environments.
 DESC
 spec.homepage      = "https://github.com/PayzeTech/Payze-iOS-SDK/"
 spec.license       = { :type => "MIT", :file => "LICENSE" }
-spec.author        = { "author" => "giga.khizanishvili@gmail.com" }
+spec.author        = { "Payze" => "Payze iOS SDK" }
 spec.platform      = :ios, "14.0"
 spec.swift_version = "5.10"
 
